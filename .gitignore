@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+
+# Build / Vite
+dist/
+dist-ssr/
+*.local
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & caches
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+.vite/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Temp / generated intermediates
+tmp/
+temp/
+*.tmp
+*.part
+public/audio/*_raw.*
+public/favicon_source.png
+
+# Optional local tooling
+.python-version
+.venv/
+venv/
+__pycache__/

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>TAINAN: A Little Journey｜台南散策 — 一段短短的府城旅行</title>
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <header class="pixel-topbar">
+      <div class="topbar-left">
+        <span class="game-badge">TAINAN V1.0</span>
+        <span class="hud-scene-label" id="hud-scene-label">SCENE 01｜神農街（午後 14:00）</span>
+      </div>
+      <div class="topbar-right">
+        <!-- Custom Retro Pixel Dropdown (No native select, no emoji) -->
+        <div class="custom-dropdown-wrap" id="scene-picker-wrap">
+          <button type="button" class="pixel-btn" id="btn-scene-picker">[ 府城景點切換 ▾ ]</button>
+          <div class="custom-pixel-menu hidden" id="scene-picker-menu">
+            <button type="button" class="custom-pixel-menu-item" data-scene="0">01 神農老街</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="1">02 海安路藝術街</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="2">03 祀典武廟</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="3">04 赤崁樓</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="4">05 永樂市場國華街</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="5">06 臺南孔廟</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="6">07 府中街莿桐花巷</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="7">08 安平古堡</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="8">09 延平老街樹屋</button>
+            <button type="button" class="custom-pixel-menu-item" data-scene="9">10 安平水岸夕陽</button>
+          </div>
+        </div>
+        <button type="button" class="pixel-btn primary" id="btn-hud-journal">
+          <span id="hud-journal-count">紀念冊 0/12</span>
+        </button>
+        <button type="button" class="pixel-btn" id="btn-hud-customizer">外觀穿搭</button>
+        <button type="button" class="pixel-btn" id="btn-hud-mute">音效：開</button>
+        <button type="button" class="pixel-btn" id="btn-hud-pause">設定 [ESC]</button>
+      </div>
+    </header>
+
+    <main class="viewport-stage">
+      <div class="canvas-frame">
+        <canvas id="game-canvas" width="400" height="225"></canvas>
+
+        <!-- Crisp World-Space Signboards Layer (#9 店名招牌) -->
+        <div id="world-signboards-layer"></div>
+
+        <!-- Vector Crisp Floating Interaction Bubble on DOM Layer -->
+        <div id="floating-prompt"></div>
+
+        <!-- High-Resolution DOM Toast Notifications Layer -->
+        <div id="toast-container"></div>
+
+        <!-- Mobile & On-Screen Touch Controls (No emoji) -->
+        <div class="touch-controls-layer">
+          <div class="touch-dpad">
+            <button type="button" class="touch-pad-btn" id="touch-left" aria-label="向左移動">◀ 左移</button>
+            <button type="button" class="touch-pad-btn" id="touch-right" aria-label="向右移動">右移 ▶</button>
+            <button type="button" class="touch-pad-btn" id="touch-run" aria-label="奔跑">疾走</button>
+          </div>
+          <div class="touch-action">
+            <button type="button" class="touch-pad-btn" id="touch-crouch" aria-label="蹲下">蹲伏</button>
+            <button type="button" class="touch-pad-btn" id="touch-jump" aria-label="跳躍">跳躍</button>
+            <button type="button" class="touch-pad-btn interact-btn" id="touch-interact" aria-label="互動取景">[E] 互動</button>
+          </div>
+        </div>
+
+        <!-- Dynamic High-Resolution Modal, Dialogue & Menu Overlays -->
+        <div id="modal-layer"></div>
+        <div id="menu-layer"></div>
+      </div>
+    </main>
+  </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

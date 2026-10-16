@@ -1,0 +1,21 @@
+{
+  "name": "tainan-a-little-journey",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "ReiKama414",
+  "description": "TAINAN: A Little Journey (台南散策 — 一段短短的府城旅行) - 2D Pixel Art Cozy Exploration Game",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

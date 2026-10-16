@@ -1,0 +1,39 @@
+---
+description: Tainan Little Journey — follow Rei/Code root norms + game rules
+alwaysApply: true
+---
+
+# Tainan Little Journey Rules
+
+## Source of truth for project norms
+
+Follow `C:\Users\User\Rei\Code\README.md` and copy LICENSE from `C:\Users\User\Rei\Code\_templates\LICENSE`.
+
+- Author: ReiKama414 — GitHub `https://github.com/ReiKama414` — Site `https://reikama414.vercel.app/`
+- Proprietary default: All Rights Reserved (`LICENSE` from template; `package.json` → `"license": "UNLICENSED"`)
+- README must include GitHub repo link, personal site, and the License / 權限 summary block from the root norms
+- Do not invent alternate copyright documents or weaken the template LICENSE
+
+## Shared BGM (mandatory)
+
+- One loop for the whole game: `public/audio/bgm_fucheng_stroll.mp3`
+- Use only `AudioManager.ensureSharedBgm()` to start/resume music
+- Never restart BGM on scene change, portal, or menu→game transitions
+- Do not call `stopLoops()` / `stopFileBgm()` from scene-load paths
+
+## Version
+
+- Game release version is **1.0** (`src/version.ts`)
+- Keep UI badges, pause/menu labels, `package.json`, and README in sync
+
+## Code
+
+- Vite + TypeScript ESM: cross-file symbols need `export` + `import`
+- Logical canvas stays **400×225**, `imageSmoothingEnabled = false`
+- Match existing style; no drive-by refactors; no unsolicited markdown files
+
+## Git hygiene
+
+- Respect `.gitignore` (`node_modules/`, `dist/`, `.env*`, `*_raw.*` audio)
+- Never commit secrets or large binary model weights
+- Remote for owned projects: `ReiKama414/<repo-name>`

@@ -330,6 +330,44 @@ html, body {
   to { opacity: 0; }
 }
 
+.credit-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 2px;
+  pointer-events: auto;
+}
+
+.credit-link {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #F8E2BE;
+  background: rgba(34, 22, 26, 0.88);
+  border: 2px solid #C4844E;
+  box-shadow: 0 2px 0 #120A0D;
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  color: #FFF8EA;
+  border-color: #F2C66D;
+  background: rgba(186, 62, 48, 0.92);
+}
+
+.credit-link:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.credit-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
 .touch-controls-layer {
   position: absolute;
   left: 0;

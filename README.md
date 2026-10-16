@@ -2,6 +2,10 @@
 
 **Version 1.0** — 2D pixel art cozy exploration；一段短短的府城旅行（神農街 → 安平水岸）。
 
+- [GitHub](https://github.com/ReiKama414/tainan-little-journey)
+- [Demo（Cloudflare Pages）](https://tainan-little-journey.pages.dev/)
+- [個人網站](https://reikama414.vercel.app/)
+
 ## 技術棧
 
 - Vite + TypeScript（ESM）
@@ -18,6 +22,12 @@ npm run dev
 ```bash
 npm run build
 npm run preview
+```
+
+部署到 Cloudflare Pages：
+
+```bash
+npm run deploy
 ```
 
 需求：Node.js 18+（建議 LTS）、現代瀏覽器（Web Audio / Canvas 2D）。
@@ -56,5 +66,6 @@ Copyright (c) ReiKama414. All rights reserved.
 不得使用、複製、修改、散布或併入其他專案（含非商業用途）。
 
 - [GitHub](https://github.com/ReiKama414/tainan-little-journey)
+- [Demo](https://tainan-little-journey.pages.dev/)
 - [個人網站](https://reikama414.vercel.app/)
 - 全文見 [LICENSE](./LICENSE)

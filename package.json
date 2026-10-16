@@ -8,8 +8,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "check": "tsc --noEmit",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=tainan-little-journey"
   },
   "dependencies": {
     "phaser": "^3.80.1"
